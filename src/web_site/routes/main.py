@@ -1,4 +1,4 @@
-# routes/index.py
+"""# routes/index.py
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -15,3 +15,4 @@ def dashboard(request: Request):
         "index.html",
         {"request": request}
     )
+"""

@@ -1,4 +1,4 @@
-import cv2
+"""import cv2
 import numpy as np
 import tensorflow as tf
 from mrcnn.config import Config
@@ -34,3 +34,4 @@ for i in range(r['rois'].shape[0]):
         y1, x1, y2, x2 = r['rois'][i]
         feuille_rognee = image[y1:y2, x1:x2]
         cv2.imwrite("feuille_rognee_ia.jpg", cv2.cvtColor(feuille_rognee, cv2.COLOR_RGB2BGR))
+"""

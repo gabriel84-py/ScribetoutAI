@@ -1,4 +1,4 @@
-# handwriting_ocrspace.py
+"""# handwriting_ocrspace.py
 
 import os
 import cv2
@@ -102,4 +102,4 @@ def main(image_path):
 
 
 if __name__ == "__main__":
-    main("va te faire foutre")
+    main("va te faire foutre")"""

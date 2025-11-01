@@ -1,4 +1,4 @@
-# routes/index.py
+"""# routes/index.py
 from fastapi import APIRouter, Request, UploadFile, File
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
@@ -23,3 +23,4 @@ async def dashboard(request: Request, image: UploadFile=File(...)):
 
     return RedirectResponse(f"/download?texte={result}", status_code=303)
 
+"""

@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+"""import matplotlib.pyplot as plt
 
 # Liste pour stocker la loss moyenne de chaque epoch
 epoch_losses = [3.4161, 3.4069, 3.3522, 3.0816, 2.3243]
@@ -10,4 +10,4 @@ plt.title("Loss moyenne par epoch")
 plt.xlabel("Epoch")
 plt.ylabel("Average Loss")
 plt.grid(True)
-plt.show()
+plt.show()"""
