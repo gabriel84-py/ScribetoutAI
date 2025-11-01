@@ -7,7 +7,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-router = APIRouter(prefix="/api", tags=["crop"])
+router = APIRouter(prefix="", tags=["crop"])
 
 # Chemin relatif basé sur la structure du projet
 BASE_DIR = Path(__file__).parent.parent.parent.parent
