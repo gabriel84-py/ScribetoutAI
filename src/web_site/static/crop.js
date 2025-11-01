@@ -605,3 +605,4 @@ function resetForm() {
   cropButton.disabled = true;
   hideMessage();
 }
+// for commit
