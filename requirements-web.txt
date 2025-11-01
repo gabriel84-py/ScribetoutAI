@@ -1,7 +1,0 @@
-# Requirements minimales pour le déploiement web sur Railway
-fastapi==0.120.1
-uvicorn[standard]==0.38.0
-python-multipart==0.0.20
-Jinja2==3.1.6
-MarkupSafe==3.0.2
-
