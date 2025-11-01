@@ -6,7 +6,7 @@ from fastapi.responses import HTMLResponse
 import uuid
 from datetime import datetime
 
-router = APIRouter(prefix="/api", tags=["crop"])
+router = APIRouter(prefix="", tags=["crop"])
 templates = Jinja2Templates(directory="/Users/gabrieljeanvermeille/PycharmProjects/ScribetoutAI/src/web_site/templates")
 
 # Dossier pour stocker les images uploadées (chemin absolu)

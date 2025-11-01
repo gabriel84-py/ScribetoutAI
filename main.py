@@ -7,8 +7,9 @@ from fastapi import FastAPI
 app = FastAPI()
 #Servir le dossier static
 app.mount("/static", StaticFiles(directory="src/web_site/static"), name="static")
-
+"""
 app.include_router(main.router)
 app.include_router(download.router)
 app.include_router(endpoint.router)
+"""
 app.include_router(crop.router)
