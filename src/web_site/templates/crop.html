@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recadrage d'image</title>
+  <title>ScribetoutAI - Recadrage d'image</title>
+  <link rel="icon" type="image/png" href="/static/favicon.png">
   <style>
     * {
       margin: 0;
@@ -35,6 +36,15 @@
       margin-bottom: 25px;
       text-align: center;
       font-size: 28px;
+    }
+
+    /* Override pour le h1 dans logo-header */
+    .logo-header h1 {
+      margin-top: 15px;
+      margin-bottom: 0;
+      color: #667eea;
+      font-size: 24px;
+      font-weight: 600;
     }
 
     .upload-section {
@@ -153,11 +163,29 @@
       border: 1px solid #f5c6cb;
       display: block;
     }
+
+    .logo-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .logo-header img {
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Recadrage d'image</h1>
+    <div class="logo-header">
+      <img src="/static/logo.png" alt="ScribetoutAI Logo">
+      <h1>Recadrage d'image</h1>
+    </div>
     
     <div class="upload-section">
       <div class="file-input-wrapper">
