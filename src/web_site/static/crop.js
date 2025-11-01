@@ -556,7 +556,7 @@ cropButton.addEventListener('click', () => {
     const formData = new FormData();
     formData.append('image', blob, 'cropped-image.jpg');
 
-    fetch('/api/crop', {
+    fetch('/crop', {
       method: 'POST',
       body: formData,
     })
