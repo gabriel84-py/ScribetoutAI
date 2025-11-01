@@ -5,12 +5,16 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 import uuid
 from datetime import datetime
+from pathlib import Path
 
-router = APIRouter(prefix="", tags=["crop"])
-templates = Jinja2Templates(directory="/Users/gabrieljeanvermeille/PycharmProjects/ScribetoutAI/src/web_site/templates")
+router = APIRouter(prefix="/api", tags=["crop"])
 
-# Dossier pour stocker les images uploadées (chemin absolu)
-UPLOAD_DIR = "/Users/gabrieljeanvermeille/PycharmProjects/ScribetoutAI/src/web_site/static/uploads"
+# Chemin relatif basé sur la structure du projet
+BASE_DIR = Path(__file__).parent.parent.parent.parent
+TEMPLATES_DIR = BASE_DIR / "src" / "web_site" / "templates"
+UPLOAD_DIR = BASE_DIR / "src" / "web_site" / "static" / "uploads"
+
+templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Route pour servir la page HTML
@@ -32,10 +36,10 @@ async def upload_image(image: UploadFile = File(...)):
             file_extension = ".jpg"
         
         unique_filename = f"cropped_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}{file_extension}"
-        file_path = os.path.join(UPLOAD_DIR, unique_filename)
+        file_path = UPLOAD_DIR / unique_filename
 
         # Sauvegarde l'image
-        with open(file_path, "wb") as buffer:
+        with open(str(file_path), "wb") as buffer:
             content = await image.read()
             buffer.write(content)
 
@@ -44,7 +48,7 @@ async def upload_image(image: UploadFile = File(...)):
             content={
                 "message": "Image recadrée envoyée et sauvegardée avec succès !",
                 "filename": unique_filename,
-                "path": file_path
+                "path": str(file_path)
             }
         )
     except HTTPException:
