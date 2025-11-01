@@ -1,7 +1,7 @@
 #main.py
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
-from src.web_site.routes import main, download, endpoint
+from src.web_site.routes import main, download, endpoint, crop
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -11,3 +11,4 @@ app.mount("/static", StaticFiles(directory="src/web_site/static"), name="static"
 app.include_router(main.router)
 app.include_router(download.router)
 app.include_router(endpoint.router)
+app.include_router(crop.router)

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recadrage d'image</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+  <style>
+    #image-to-crop { max-width: 100%; }
+    .cropper-container { width: 100%; height: 400px; }
+  </style>
+</head>
+<body>
+  <input type="file" id="upload-input" accept="image/*">
+  <img id="image-to-crop">
+  <button id="crop-button">Valider et envoyer</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <script src="/static/crop.js"></script>
+</body>
+</html>
